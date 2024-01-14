@@ -1,0 +1,23 @@
+version: "3"
+services:
+  lms-postgresql:
+    image: postgres:15.3 # latest verified version
+    container_name: lms-postgresql
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - lms-postgresql:/var/lib/postgresql/data
+      - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+    env_file:
+      - .env
+
+  # veribom frontend app
+  # frontend-customer:
+  #   image: 282904853176.dkr.ecr.us-west-2.amazonaws.com/veribom-customer-frontend:develop
+  #   ports:
+  #     - 8080:80
+
+volumes:
+  #store at /var/lib/docker/volumes/(container_NAME OR container_ID)  Access with root user
+  lms-postgresql:
