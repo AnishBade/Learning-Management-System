@@ -64,3 +64,5 @@ export default function CourseDetail() {
       </div>
   )
 }
+
+// Note : this need to be deleted
