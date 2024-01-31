@@ -20,10 +20,10 @@ export default function Header() {
               <Link  className="nav-link" to=''>Teachers</Link>
             </li>
             <li className="nav-item">
-              <Link  className="nav-link" to='/'>User Login</Link>
+              <Link  className="nav-link" to='/user-login'>User Login</Link>
             </li>
             <li className="nav-item">
-              <Link  className="nav-link" to='/about'>User Register</Link>
+              <Link  className="nav-link" to='/user-register'>User Register</Link>
             </li>
           </ul>
         </div>
